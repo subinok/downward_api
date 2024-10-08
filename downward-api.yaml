@@ -5,8 +5,10 @@ metadata:
 spec:
   containers:
   - name: main
-    image: busybox
-    command: ["sleep", "99999"]
+    imagePullPolicy: Always
+    image: ghcr.io/subinok/downward_api:v2
+	# image: busybox
+    # command: ["sleep", "99999"]
     resources:
       requests:
         cpu: 15m
