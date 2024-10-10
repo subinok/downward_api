@@ -6,16 +6,15 @@ spec:
   containers:
   - name: main
     imagePullPolicy: Always
-    image: ghcr.io/subinok/downward_api:v2
-	# image: busybox
-    # command: ["sleep", "99999"]
+    image: ghcr.io/subinok/downward_api:master # image: busybox
+  # command: ["sleep", "99999"]
     resources:
       requests:
         cpu: 15m
         memory: 100Ki
       limits:
         cpu: 100m
-        memory: 20Mi
+        memory: 500Mi
     env:
     - name: POD_NAME
       valueFrom:
